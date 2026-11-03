@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jinusha J J | DevOps Engineer</title>
+<meta name="description" content="Portfolio of Jinusha J J, DevOps Engineer skilled in AWS, Docker, Jenkins, Linux, Prometheus and Grafana.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#050816;--bg2:#0a1030;--card:rgba(17,26,64,.55);--line:rgba(120,140,255,.18);--tx:#eef1ff;--mut:#a3aedb;--blue:#3b95ff;--vio:#9b6bff;--cy:#22d3ee;--grad:linear-gradient(120deg,#3b95ff,#9b6bff 60%,#e879f9)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--tx);font-family:'Space Grotesk',system-ui,sans-serif;line-height:1.65;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+a:focus-visible,button:focus-visible{outline:2px solid var(--cy);outline-offset:3px}
+.bgfx{position:fixed;inset:0;z-index:-1;overflow:hidden;background:var(--bg)}
+.bgfx::before{content:"";position:absolute;inset:0;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:56px 56px;opacity:.35;-webkit-mask-image:radial-gradient(ellipse at 50% 20%,#000,transparent 75%);mask-image:radial-gradient(ellipse at 50% 20%,#000,transparent 75%)}
+.orb{position:absolute;border-radius:50%;filter:blur(90px);opacity:.5;animation:fl 18s ease-in-out infinite alternate}
+.o1{width:460px;height:460px;background:#3b95ff;top:-120px;left:-100px}
+.o2{width:520px;height:520px;background:#9b6bff;top:30%;right:-160px;animation-delay:-6s}
+.o3{width:380px;height:380px;background:#22d3ee;bottom:-120px;left:30%;opacity:.28;animation-delay:-11s}
+@keyframes fl{to{transform:translate(60px,50px) scale(1.12)}}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+nav{position:sticky;top:0;z-index:20;background:rgba(5,8,22,.72);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;height:66px}
+.logo{font-weight:700;font-size:1.15rem;display:flex;align-items:center;gap:10px}
+.logo b{width:32px;height:32px;border-radius:9px;background:var(--grad);display:grid;place-items:center;font-size:.9rem}
+nav ul{display:flex;gap:28px;list-style:none;font-size:.95rem;color:var(--mut)}
+nav ul a{transition:color .2s}nav ul a:hover{color:var(--tx)}
+.nbtn{padding:8px 18px;border-radius:99px;border:1px solid var(--line);font-size:.9rem;transition:border-color .2s,background .2s}
+.nbtn:hover{border-color:var(--cy);background:rgba(34,211,238,.08)}
+.hero{padding:96px 0 70px}
+.hero .wrap{text-align:center}.hero .tag{margin-inline:auto}.hero .btns{justify-content:center}
+.pill{display:inline-flex;align-items:center;gap:9px;padding:7px 16px;border-radius:99px;border:1px solid var(--line);background:var(--card);font-size:.88rem;color:var(--mut);margin-bottom:26px}
+.pill i{width:8px;height:8px;border-radius:50%;background:#4ade80;box-shadow:0 0 0 0 rgba(74,222,128,.7);animation:pu 2s infinite}
+@keyframes pu{70%{box-shadow:0 0 0 9px rgba(74,222,128,0)}100%{box-shadow:0 0 0 0 rgba(74,222,128,0)}}
+.hi{color:var(--mut);font-size:1.2rem;margin-bottom:6px}
+h1{font-size:clamp(2.8rem,8.4vw,6.2rem);line-height:.92;font-weight:700;letter-spacing:-.035em;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;animation:rise .9s cubic-bezier(.2,.7,.2,1) both}
+@keyframes rise{from{opacity:0;transform:translateY(26px)}}
+.role{font-size:1.5rem;font-weight:500;margin:20px 0 14px}
+.tag{color:var(--mut);max-width:48ch;font-size:1.08rem;margin-bottom:32px}
+.btns{display:flex;gap:14px;flex-wrap:wrap}
+.btn{padding:14px 28px;border-radius:12px;font-weight:500;border:1px solid var(--line);background:var(--card);transition:transform .2s,box-shadow .2s,border-color .2s}
+.btn.p{background:var(--grad);border:0;box-shadow:0 10px 30px rgba(91,110,255,.4)}
+.btn:hover{transform:translateY(-2px);border-color:var(--cy)}
+.btn.p:hover{box-shadow:0 14px 38px rgba(139,92,246,.6)}
+.tw{position:relative}
+.tw::before{content:"";position:absolute;inset:-2px;border-radius:18px;background:var(--grad);opacity:.55;filter:blur(22px)}
+.term{position:relative;background:#04061a;border:1px solid var(--line);border-radius:16px;font-family:'JetBrains Mono',monospace;font-size:.85rem;overflow:hidden}
+.bar{display:flex;gap:7px;align-items:center;padding:13px 16px;background:#0a1030;border-bottom:1px solid var(--line);color:var(--mut);font-size:.78rem}
+.bar i{width:11px;height:11px;border-radius:50%;display:block}
+.bar i:nth-child(1){background:#ff5f57}.bar i:nth-child(2){background:#febc2e}.bar i:nth-child(3){background:#28c840}
+.bar b{margin-left:10px;font-weight:400}
+#tb{padding:20px;min-height:300px;white-space:pre-wrap;word-break:break-word}
+.pr{color:#5eead4}.cm{color:#fff}.ok{color:#4ade80}.dm{color:var(--mut)}
+.cur{display:inline-block;width:8px;height:15px;background:var(--cy);vertical-align:middle;animation:bl 1s steps(2) infinite}
+@keyframes bl{50%{opacity:0}}
+.flow{padding:10px 0 30px}
+.fl{display:grid;grid-template-columns:repeat(5,1fr);gap:0;position:relative;text-align:center}
+.fl::before{content:"";position:absolute;top:27px;left:10%;right:10%;height:2px;background:linear-gradient(90deg,transparent,var(--blue),var(--vio),transparent);opacity:.6}
+.st{position:relative}
+.st span{width:54px;height:54px;border-radius:50%;margin:0 auto 10px;display:grid;place-items:center;background:var(--bg2);border:1px solid var(--line);font-size:1.3rem;animation:glow 5s infinite}
+.st:nth-child(2) span{animation-delay:1s}.st:nth-child(3) span{animation-delay:2s}.st:nth-child(4) span{animation-delay:3s}.st:nth-child(5) span{animation-delay:4s}
+@keyframes glow{0%,20%,100%{box-shadow:none;border-color:var(--line)}10%{box-shadow:0 0 24px var(--cy);border-color:var(--cy)}}
+.st p{font-size:.88rem;color:var(--mut)}
+section{padding:84px 0}
+h2{font-size:2.3rem;letter-spacing:-.02em;margin-bottom:10px}
+h2 em{font-style:normal;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.sub{color:var(--mut);margin-bottom:40px;max-width:60ch}
+.grid{display:grid;gap:20px}
+.glass{background:var(--card);border:1px solid var(--line);border-radius:18px;backdrop-filter:blur(10px);transition:border-color .25s,transform .25s,box-shadow .25s}
+.glass:hover{border-color:var(--ac,var(--vio));transform:translateY(-4px);box-shadow:0 18px 40px -18px var(--ac,var(--vio))}
+.skills{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.sk{padding:24px}
+.ic{width:52px;height:52px;border-radius:14px;display:grid;place-items:center;font-weight:700;margin-bottom:16px;font-family:'JetBrains Mono',monospace;font-size:.95rem;color:#fff;background:var(--ac)}
+.sk h3{font-size:1.1rem;margin-bottom:6px}
+.sk p{color:var(--mut);font-size:.92rem;margin-bottom:14px}
+.chips{display:flex;flex-wrap:wrap;gap:7px}
+.chips span{font-size:.74rem;padding:3px 11px;border-radius:99px;border:1px solid var(--line);color:var(--mut);font-family:'JetBrains Mono',monospace}
+.projects{grid-template-columns:repeat(auto-fit,minmax(310px,1fr))}
+.pj{padding:20px}
+.shot{height:158px;border-radius:12px;margin-bottom:18px;background:linear-gradient(135deg,#101a45,#1d1459);border:1px solid var(--line);padding:16px;font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--mut);overflow:hidden}
+.shot div{height:8px;border-radius:4px;background:rgba(120,140,255,.25);margin-bottom:10px}
+.shot .a{width:70%;background:var(--blue)}.shot .b{width:45%;background:var(--vio)}.shot .c{width:88%}.shot .d{width:60%;background:var(--cy)}
+.pj h3{font-size:1.15rem;margin-bottom:6px}
+.pj p{color:var(--mut);font-size:.94rem}
+.pj .chips{margin:14px 0 18px}
+.gh{color:var(--cy);font-weight:500;font-size:.93rem;display:inline-flex;gap:6px}
+.gh:hover{text-decoration:underline}
+.ghp{max-width:420px}
+.prof{padding:28px;text-align:center}
+.av{width:104px;height:104px;border-radius:50%;margin:0 auto 16px;background:var(--grad);display:grid;place-items:center;font-size:2.2rem;font-weight:700;overflow:hidden;border:3px solid var(--line)}
+.av img{width:100%;height:100%;object-fit:cover}
+.prof h3{font-size:1.25rem}.prof p{color:var(--mut);font-size:.9rem;margin:4px 0 22px}
+.nums{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:20px}
+.nums div{padding:10px;border-radius:12px;background:rgba(120,140,255,.08)}
+.nums b{display:block;font-size:1.3rem}.nums small{color:var(--mut)}
+.repos{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.rp{padding:20px;display:block}
+.rp h4{font-family:'JetBrains Mono',monospace;font-size:.98rem;color:var(--cy);margin-bottom:8px;word-break:break-word}
+.rp p{color:var(--mut);font-size:.9rem;min-height:3.2em;margin-bottom:14px}
+.meta{display:flex;gap:16px;font-size:.8rem;color:var(--mut)}
+.dot{display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--vio);margin-right:6px}
+.two{grid-template-columns:1.15fr 1fr;gap:48px}
+.about{max-width:760px}.about p{color:var(--mut);margin-bottom:16px;font-size:1.04rem}
+.tl{border-left:2px solid var(--line);padding-left:26px;position:relative}
+.tl::before{content:"";position:absolute;left:-7px;top:6px;width:12px;height:12px;border-radius:50%;background:var(--grad)}
+.tl h3{font-size:1.15rem}.tl p{color:var(--mut)}
+.tl small{color:var(--cy);font-family:'JetBrains Mono',monospace}
+.cta{text-align:center;padding:64px 28px;border-radius:26px;background:linear-gradient(135deg,rgba(59,149,255,.16),rgba(155,107,255,.2));border:1px solid var(--line)}
+.cta .sub{margin-inline:auto}
+.cta .btns{justify-content:center}
+footer{padding:30px;text-align:center;color:var(--mut);font-size:.86rem;border-top:1px solid var(--line)}
+@media(max-width:860px){.hero{padding-top:56px}nav ul{display:none}.fl{grid-template-columns:repeat(5,1fr)}.st p{font-size:.72rem}.st span{width:44px;height:44px}.fl::before{top:22px}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="bgfx" aria-hidden="true"><div class="orb o1"></div><div class="orb o2"></div><div class="orb o3"></div></div>
+
+<nav><div class="wrap"><a class="logo" href="#top"><b>JJ</b>Jinusha</a>
+<ul><li><a href="#skills">Skills</a></li><li><a href="#projects">Projects</a></li><li><a href="#github">GitHub</a></li><li><a href="#about">About</a></li></ul>
+<a class="nbtn" href="#contact">Hire me</a></div></nav>
+
+<header class="hero" id="top"><div class="wrap">
+<div>
+<div class="pill"><i></i>Open to DevOps opportunities</div>
+<p class="hi">Hi, I'm</p>
+<h1>JINUSHA J J</h1>
+<p class="role">DevOps Engineer</p>
+<p class="tag">I build CI/CD pipelines, containerised deployments and monitoring setups that keep applications fast, stable and easy to release.</p>
+<div class="btns"><a class="btn p" href="#projects">View my work</a><a class="btn" href="#contact">Get in touch</a></div>
+</div>
+</div></header>
+
+<div class="flow"><div class="wrap"><div class="fl" aria-label="DevOps workflow: Code, Build, Test, Deploy, Monitor">
+<div class="st"><span>💻</span><p>Code</p></div><div class="st"><span>🔨</span><p>Build</p></div><div class="st"><span>🧪</span><p>Test</p></div><div class="st"><span>🚀</span><p>Deploy</p></div><div class="st"><span>📈</span><p>Monitor</p></div>
+</div></div></div>
+
+<section id="skills"><div class="wrap">
+<h2>Tools I <em>work with</em></h2><p class="sub">Everything I need to build, ship and monitor software.</p>
+<div class="grid skills">
+<div class="glass sk" style="--ac:#f59e0b"><div class="ic">AWS</div><h3>AWS</h3><p>Cloud infrastructure for hosting and scaling applications.</p><div class="chips"><span>EC2</span><span>S3</span><span>IAM</span><span>VPC</span></div></div>
+<div class="glass sk" style="--ac:#2496ed"><div class="ic">DK</div><h3>Docker</h3><p>Packaging apps into portable, repeatable containers.</p><div class="chips"><span>Images</span><span>Compose</span><span>Registry</span></div></div>
+<div class="glass sk" style="--ac:#d33833"><div class="ic">JK</div><h3>Jenkins</h3><p>Automated build, test and deploy pipelines.</p><div class="chips"><span>Pipelines</span><span>Jenkinsfile</span><span>Webhooks</span></div></div>
+<div class="glass sk" style="--ac:#8b5cf6"><div class="ic">GH</div><h3>GitHub</h3><p>Version control, code review and workflow automation.</p><div class="chips"><span>Git</span><span>Actions</span><span>Pull requests</span></div></div>
+<div class="glass sk" style="--ac:#22c55e"><div class="ic">LX</div><h3>Linux</h3><p>Server administration and shell scripting.</p><div class="chips"><span>Bash</span><span>Systemd</span><span>Networking</span></div></div>
+<div class="glass sk" style="--ac:#e6522c"><div class="ic">PM</div><h3>Prometheus</h3><p>Collecting metrics and alerting on failures.</p><div class="chips"><span>Metrics</span><span>Alert rules</span><span>Exporters</span></div></div>
+<div class="glass sk" style="--ac:#f97316"><div class="ic">GF</div><h3>Grafana</h3><p>Dashboards that show system health at a glance.</p><div class="chips"><span>Dashboards</span><span>Panels</span><span>Alerts</span></div></div>
+</div></div></section>
+
+<section id="projects"><div class="wrap">
+<h2>Featured <em>projects</em></h2><p class="sub">Hands-on DevOps projects. Replace the links below with your own repositories.</p>
+<div class="grid projects">
+<article class="glass pj" style="--ac:#d33833"><div class="shot"><div class="a"></div><div class="c"></div><div class="b"></div><div class="d"></div>▸ build #42 passed</div>
+<h3>CI/CD Pipeline with Jenkins</h3><p>A pipeline that builds, tests and deploys an application automatically on every GitHub push.</p>
+<div class="chips"><span>Jenkins</span><span>GitHub</span><span>Docker</span></div><a class="gh" href="https://github.com/jinusha-jj" target="_blank" rel="noopener">View on GitHub ↗️</a></article>
+<article class="glass pj" style="--ac:#f59e0b"><div class="shot"><div class="b"></div><div class="a"></div><div class="d"></div><div class="c"></div>▸ container: running</div>
+<h3>Dockerised App on AWS</h3><p>A containerised web application deployed on an EC2 instance behind a load balancer.</p>
+<div class="chips"><span>AWS</span><span>Docker</span><span>Linux</span></div><a class="gh" href="https://github.com/jinusha-jj" target="_blank" rel="noopener">View on GitHub ↗️</a></article>
+<article class="glass pj" style="--ac:#e6522c"><div class="shot"><div class="c"></div><div class="a"></div><div class="b"></div><div class="d"></div>▸ cpu 38% · mem 52%</div>
+<h3>Monitoring Dashboard</h3><p>A Prometheus and Grafana stack that tracks server metrics and sends alerts when something fails.</p>
+<div class="chips"><span>Prometheus</span><span>Grafana</span><span>Linux</span></div><a class="gh" href="https://github.com/jinusha-jj" target="_blank" rel="noopener">View on GitHub ↗️</a></article>
+</div></div></section>
+
+<section id="github"><div class="wrap">
+<h2>My <em>GitHub</em></h2><p class="sub">Follow my work and activity on GitHub.</p>
+<div class="ghp">
+<div class="glass prof"><div class="av" id="av">JJ</div><h3 id="gn">Jinusha J J</h3><p id="gu">@jinusha-jj</p>
+<a class="btn p" id="gl" href="https://github.com/jinusha-jj" target="_blank" rel="noopener" style="display:block">Open GitHub profile</a></div>
+</div></div></section>
+
+<section id="about"><div class="wrap">
+<div class="about"><h2>About <em>me</em></h2>
+<p>I'm Jinusha J J, a DevOps Engineer who enjoys turning slow, manual release processes into reliable automated workflows.</p>
+<p>I work with AWS, Docker, Jenkins and Linux, and I add Prometheus and Grafana monitoring so problems are visible before users notice them.</p>
+<p>I'm looking for a DevOps role where I can keep learning and help teams ship with confidence.</p></div>
+</div></section>
+
+<section id="contact"><div class="wrap"><div class="cta">
+<h2>Let's build something <em>reliable</em></h2><p class="sub">I'm open to DevOps roles and projects. Send me a message and I'll reply soon.</p>
+<div class="btns"><a class="btn p" href="mailto:ushajinusha@gmail.com">ushajinusha@gmail.com</a><a class="btn" href="https://www.linkedin.com/in/jinusha-238w" target="_blank" rel="noopener">LinkedIn</a></div>
+</div></div></section>
+<footer>© 2026 Jinusha J J. All rights reserved.</footer>
+
+<script>
+/* ===== Put your GitHub username here, e.g. "jinusha" ===== */
+var GITHUB_USER = "jinusha-jj";
+
+(function(){
+function esc(s){return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;")}
+if(!GITHUB_USER)return;
+var api='https://api.github.com/users/'+encodeURIComponent(GITHUB_USER);
+document.getElementById('gl').href='https://github.com/'+GITHUB_USER;
+document.getElementById('gu').textContent='@'+GITHUB_USER;
+fetch(api).then(function(r){if(!r.ok)throw 0;return r.json()}).then(function(u){
+if(u.name)document.getElementById('gn').textContent=u.name;
+if(u.avatar_url){var a=document.getElementById('av');a.innerHTML='';var im=new Image();im.src=u.avatar_url;im.alt='Profile photo';a.appendChild(im)}
+}).catch(function(){});
+})();
+</script>
+</body>
+</html>
